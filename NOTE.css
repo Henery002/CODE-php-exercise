@@ -139,8 +139,13 @@
 	[例]：2-13-while.php	乘法口诀表
 4.do{...}while()
 5.for(){...}
-6.break;				//终止循环
-
+6.break;					//终止循环
+  break n;					//终止n层循环				
+7.continue;					//跳出当前循环体(即不继续执行continue后面的语句)，返回到当前循环体头部继续执行
+  continue n;				//跳出n层循环
+8.exit / exit('退出');		//终止整个脚本的运行(即不再执行exit之后的脚本)
+  die / die('退出');
+  [注]：exit / die 意义和用法均相同
 
 <2-18> FUNCTION函数（一）
 
