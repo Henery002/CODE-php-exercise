@@ -28,6 +28,9 @@
 	echo decbin(~$b)." -- {$b}的按位非";
 		echo "<hr>";
 
+	echo decbin($a << 2)." -- {$a}的左移2位<br>";
+	echo decbin($a >> 2)." -- {$a}的右移2位<br>";
+
 
 
 
