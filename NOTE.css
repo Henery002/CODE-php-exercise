@@ -148,10 +148,10 @@
   [注]：exit / die 意义和用法均相同
 
 <2-18> FUNCTION函数（一）
-
 <2-19> FUNCTION函数（二）
-
 <2-20> FUNCTION函数（三）
+1.function_exists('funName')		//检测函数是否已定义。返回布尔值
+
 
 <2-21> 代码重用
 

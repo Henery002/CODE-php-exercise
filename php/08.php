@@ -13,7 +13,7 @@
 	//建一个类，定义属性和方法
 	class c{
 		public $c;
-		function eat($men){
+		function getEatFood($men){
 			echo $men.'在吃饭';
 		}
 	}
@@ -23,7 +23,7 @@
 	//检测$hd的数据类型
 	echo getType($hd);		//object
 	echo "<br>";
-	echo $hd->eat('You');	//
+	echo $hd->getEatFood('You');	//
 
 	echo "<hr>";
 
