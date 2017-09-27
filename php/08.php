@@ -4,7 +4,7 @@
 */
 	$obj = '后盾网';		//string
 	$obj = 12;				//integer
-	$obj = 12.0;				//double
+	$obj = 1.0;				//double
 	echo getType($obj);
 
 	echo "<hr>";
@@ -66,7 +66,27 @@
 		echo "无人员名单";
 	}
 
+	echo "<hr>";
+	var_dump((bool) "false");	//bool(true)
 
-
+	echo "<hr>";
 
 ?>
+	
+<p>流程控制的替代语法</p>
+
+<?php if($obj) : ?>
+<h2>变量$obj存在时显示</h2>
+<?php endif; ?>
+
+<?php
+	if($obj > 10):
+		echo "变量大于10";
+	elseif($obj == 10):
+		echo "变量等于10";
+	else:
+		echo "变量小于10";
+	endif;
+?>	
+
+
