@@ -150,11 +150,39 @@
 <2-18> FUNCTION函数（一）
 <2-19> FUNCTION函数（二）
 <2-20> FUNCTION函数（三）
-1.function_exists('funName')		//检测函数是否已定义。返回布尔值
+1.静态变量
+	static $aaa;
+2.按值传递 / 按址传递	function fun(&$variable){...}
+	[例]：$name = '...';
+		function fun3($name){
+			$name = $name.'按值传递';
+			echo $name;
+		}
+		function fun4(&$name){
+			$name = $name.'按址传递';
+		}
+		fun3();	//函数fun3中按值传递时，不会改变函数外部变量的值
+		fun4();	//函数fun4中按址传递时，会将外部变量一起改变
+		echo $name;	
 
+3.function_exists('funName');	//检测函数是否已定义。返回布尔值
+4.func_get_args();				//接收函数传递的实参数组
+5.func_get_arg(n);				//获取第n个参数，序号从0开始			
+6.func_num_args();				//获取参数的个数
+	[例]：2-19.php
+7.变量函数
+	[注]：在变量后加()，系统会自动查找与变量值同名的函数去执行
+8.递归调用
+	[注]：在函数体内调用本函数自己
+9.内部函数
+	[注]：在函数体内定义函数
 
 <2-21> 代码重用
-
+1.载入文件
+	1.include()			//若文件不存在，提示警告性错误，不影响后续程序运行
+	2.require()			//若文件不存在，致命性错误，后续程序终止运行
+	3.include_once()	//只载入一次文件，若已载入，则不再载入
+	4.require_once()
 
 <3-01> 定义字符串
 
