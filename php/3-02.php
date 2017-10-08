@@ -49,6 +49,8 @@ echo "<hr/>";
 * 将数组元素拼接成字符串
 */
 $array = array('后盾网','www.houdunwang.com','点此');
+print_r(implode($array));
+echo "<br/>";
 print_r(implode('_', $array));
 
 ?>
