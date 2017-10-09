@@ -32,7 +32,25 @@ echo (substr($str13, 6));
 echo "<hr/>";
 echo (strchr($str13,'n'));	//同strstr
 
+echo "<hr/>";
+/*
+* 标记分割字符串、将字符串分割成小块
+* strtok、parse_str实例
+*/
+$url = 'www.houdunwang.com?uname=lisan&age=23&sex=male';
+// echo strpos($url, '?');
+$url_str = substr($url, (strpos($url, '?')+1));
+echo $url_str;
+parse_str($url_str);		//无返回值
+echo '<br/>用户名为：'.$uname.'<br/>年龄为：'.$age.'<br/>性别为：'.$sex.'<br/>';
 
+echo "<hr/>";
+/*
+* 将字符串拆分成小块
+* chunk_split()
+*/
+$str22 = 'php,javascript,c++,java,webpack';
+echo chunk_split($str22,'4',' <br/>------<br/> ');		//将字符串以每4个字节拆分成子字符串
 
 
 ?>
