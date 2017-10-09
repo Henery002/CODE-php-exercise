@@ -187,7 +187,7 @@
 <3-01> 定义字符串
 
 <3-02> 字符串处理函数（一）
--------------------------[3-02.php]-------------------------
+---------------------------[3-02.php]---------------------------
 1.处理字符串的空格
 	1.trim()			//trim($name);
 	2.ltrim()
@@ -219,7 +219,7 @@
 9.将数组元素拼接成字符串
 	1.implode(['字符串连接符',]数组);
 	[例]：print_r(implode('_',$array));
----------------------------[3-03.php]-------------------------
+---------------------------[3-03.php]---------------------------
 10.字符串输出
 	1.echo ();		//输出一个或多个字符串
 	2.print();		//输出字符串，不能同时输出多个
@@ -253,7 +253,7 @@
 15.将字符串分割成小块
 	1.chunk_split($str,number,$token);			//把字符串按指定大小拆分
 	[注]：将字符串$str以每number字节拆分，并用$token连接
--------------------------------[3-04.php]--------------------------
+---------------------------[3-04.php]---------------------------
 16.字符串/数组替换
 	1.str_replace($search,$replace,$str[,$k]);	//区分大小写
 	2.str_ireplace($search,$replace,$str[,$k]);	//不区分大小写
@@ -277,11 +277,47 @@
 	2.strtr($str,$array_replace);		//指定替换的数组，效果相同
 	[例]：3-04.php
 19.字符串统计函数/计算字符串出现的次数
-	1.substr_count($str,$search[,$starti[,$length]]);		//返回值为 次数
+	1.substr_count($str,$search[,$starti[,$length]]);		//返回值为 整型
 	[注]：返回子字符串search在字符串$str中出现的次数。注意 $search 区分大小写。 
 		第三个参数指定查找起始位置，第四个参数指定查找的长度
--------------------------------[3-05.php]------------------------------
-20.
+---------------------------[3-05.php]---------------------------
+20.解析URL并返回其组成部分
+	1.parse_url($url[,$component]);		//解析$url并返回一个关联数组，包含在 URL 中出现的各种组成部分
+	[注]：第二个参数用于获取url中指定部分的string
+		1.print_f(parse_url($url));		//返回一个关联数组
+		2.echo parse_url($url,PHP_URL_PATH);	//返回一个string
+	[注]：$component参数可取值：
+		1.PHP_URL_SCHEME
+		2.PHP_URL_HOST
+		3.PHP_URL_USER
+		4.PHP_URL_PORT
+		5.PHP_URL_PASS
+		6.PHP_URL_PATH
+		7.PHP_URL_QUERY
+		8.PHP_URL_FRAGMENT
+21.编码/解码URL字符串
+	1.urlencode($str);			//
+	2.urldecode($str);
+22.将字符串转换为HTML实体
+	1.htmlentities($str[,$flags]);
+	[注]：第二个参数$flags可取值为：
+		1.ENT_COMPAT		//只转换双引号
+		2.ENT_QUOTES		//转换单双引号
+		3.ENT_IGNORE		//不转换引号
+		4....
+	2.htmlspecialchars($str[,$flags]);
+23.将已转为HTML实体的内容转换为字符串
+	1.htmlspecialchars_decode($str);
+---------------------------[3-06.php]---------------------------
+24.使用反斜杠引用字符串
+	1.addslashes($str);			//在预定义字符串前添加反斜杠
+	2.get_magic_quotes_gpc();	//获取 PHP.INI 中是否开启自动转义
+	[注]：如果 magic_quotes_gpc 为关闭时返回 0，否则返回 1。在 PHP 5.4.O 起将始终返回 FALSE
+	3.stripslashes($str);		//把转义字符串前的反斜杠删除
+---------------------------[3-07.php]---------------------------
+25.
+
+
 
 
 
