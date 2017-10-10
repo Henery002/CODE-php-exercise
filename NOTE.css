@@ -296,7 +296,7 @@
 		7.PHP_URL_QUERY
 		8.PHP_URL_FRAGMENT
 21.编码/解码URL字符串
-	1.urlencode($str);			//
+	1.urlencode($str);		//
 	2.urldecode($str);
 22.将字符串转换为HTML实体
 	1.htmlentities($str[,$flags]);
@@ -315,7 +315,8 @@
 	[注]：如果 magic_quotes_gpc 为关闭时返回 0，否则返回 1。在 PHP 5.4.O 起将始终返回 FALSE
 	3.stripslashes($str);		//把转义字符串前的反斜杠删除
 ---------------------------[3-07.php]---------------------------
-25.
+25.获得在系统配置文件中是否设置了对读取外部文件进行转义
+	1.get_magin_quotes_runtime();
 
 
 
